@@ -11,8 +11,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: const Center(
-          child: Text('Hello World!'),
+        body: Center(
+          child: Text('This is Bens branch'),
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(16),
