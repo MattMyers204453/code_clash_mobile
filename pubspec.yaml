@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  google_fonts: ^8.0.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -17,3 +18,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/code_clash_logo.jfif
