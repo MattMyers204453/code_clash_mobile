@@ -52,26 +52,4 @@ class IntroScreen extends StatelessWidget {
   }
 }
 
-class CreateGameScreen extends StatelessWidget {
-  const CreateGameScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Create Game')),
-      body: const Center(child: Text('Create Game Screen')),
-    );
-  }
-}
-
-class JoinGameScreen extends StatelessWidget {
-  const JoinGameScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Join Game')),
-      body: const Center(child: Text('Join Game Screen')),
-    );
-  }
-}
