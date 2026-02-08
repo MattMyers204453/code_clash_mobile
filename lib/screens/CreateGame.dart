@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class CreateGameScreen extends StatelessWidget {
-  const CreateGameScreen({super.key});
+  CreateGameScreen({super.key});
+  final List<String> WordsUsed = [];
   final List<String> words = const [
     'banana',
     'Lebron',
@@ -12,7 +15,43 @@ class CreateGameScreen extends StatelessWidget {
     'fries',
     'happy',
     'Star Wars',
+    'Pizza',
+    'Family',
+    'Lincoln',
+    'Eden',
+    'Mom',
+    'Dad',
+    'Katie',
+    'Will',
+    'Karsyn',
+    'Brooke',
+    'Matt',
+    'Josh',
+    'Erica',
+    'Ben',
+    'Ellie',
+    'Myra',
+    'Silly',
+    'Joyful',
+    'Sad',
+    'Peanut Butter',
+    'Park'
   ];
+
+  String UnusedWord(){
+    Random random_int = Random();
+    int random_index = random_int.nextInt(words.length);
+    String clue = words[random_index];
+    while(true){
+      if(!WordsUsed.contains(clue)){
+          WordsUsed.add(clue);
+          break;
+        }
+    random_index = random_int.nextInt(words.length);
+    clue = words[random_index];
+    }
+    return clue;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +61,23 @@ class CreateGameScreen extends StatelessWidget {
         // Create a grid with 2 columns.
         // If you change the scrollDirection to horizontal,
         // this produces 2 rows.
-        crossAxisCount: 3,
+        crossAxisCount: 2,
         // Generate 100 widgets that display their index in the list.
-        children: List.generate(9, (index) {
+        children: List.generate(8, (index) {
+          String clue = UnusedWord();
           return Center(
             child: Card(
               elevation: 10.0,
-              //rcolor: Colors.white,
+              //color: Colors.lightBlue,
               child: SizedBox(
                 width: 300.0,
                 height: 100.0,
-                child: Text(
-                  words[index],
-                  style: TextTheme.of(context).headlineSmall
+                child: Center(
+                  child: Text(
+                    clue,
+                    style: TextTheme.of(context).headlineSmall,
+                
+                  ),
                 ),
               ),
             ),
