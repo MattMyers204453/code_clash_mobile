@@ -12,6 +12,7 @@ class CreateGameScreen extends StatelessWidget {
     'fries',
     'happy',
     'Star Wars',
+    'Pizza',
   ];
 
   @override
@@ -22,19 +23,21 @@ class CreateGameScreen extends StatelessWidget {
         // Create a grid with 2 columns.
         // If you change the scrollDirection to horizontal,
         // this produces 2 rows.
-        crossAxisCount: 3,
+        crossAxisCount: 2,
         // Generate 100 widgets that display their index in the list.
-        children: List.generate(9, (index) {
+        children: List.generate(8, (index) {
           return Center(
             child: Card(
               elevation: 10.0,
-              //rcolor: Colors.white,
+              //color: Colors.lightBlue,
               child: SizedBox(
                 width: 300.0,
                 height: 100.0,
-                child: Text(
-                  words[index],
-                  style: TextTheme.of(context).headlineSmall
+                child: Center(
+                  child: Text(
+                    words[index],
+                    style: TextTheme.of(context).headlineSmall,
+                  ),
                 ),
               ),
             ),
