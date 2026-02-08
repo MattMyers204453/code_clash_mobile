@@ -1,6 +1,7 @@
+import 'package:code_clash_mobile/screens/CreateGame.dart';
 import 'package:code_clash_mobile/screens/Intro.dart';
+import 'package:code_clash_mobile/screens/JoinGame.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MainApp());
